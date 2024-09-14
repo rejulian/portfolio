@@ -1,0 +1,151 @@
+---
+import "@/styles/global.css";
+import Layout from "@/layouts/Layout.astro";
+import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardContent } from "@/components/ui/card";
+import { Download, ExternalLink } from "lucide-react";
+import Nextjs from "@/components/ui/next-logo";
+import ReactLogo from "@/components/ui/react-logo";
+import Tailwind from "@/components/ui/tailwind-logo";
+import Nodejs from "@/components/ui/node-logo";
+import Express from "@/components/ui/express-logo";
+import MySQL from "@/components/ui/mysql-logo";
+import Mongo from "@/components/ui/mongo-logo";
+---
+
+<Layout
+  title="Julian Re Portfolio - Software Engineer"
+  description="Julian Re, Desarrollador y Programador web. Especializado en crear aplicaciones únicas."
+>
+  <main
+    class="container max-w-3xl m-auto pt-12 flex flex-col gap-10 px-4 animate-fade-right animate-once"
+  >
+    <section class="flex flex-col gap-8">
+      <div class="flex flex-col gap-5">
+        <h1 class="text-4xl font-bold sm:text-7xl">Hey, I'm Julian Re</h1>
+        <div class="flex flex-col gap-5 sm:flex-row justify-between">
+          <Button className="border border-zinc-700 w-28">
+            <Download className="mr-2 size-4" />CV</Button
+          >
+          <div class="flex items-center gap-4">
+            <p class="text-2xl text-white/90">Stack |</p>
+            <Nextjs className="size-8" />
+            <ReactLogo className="size-8" />
+            <Tailwind className="size-8" />
+            <Nodejs className="size-8" />
+            <Express className="size-8" />
+            <MySQL className="size-8" />
+            <Mongo className="size-8" />
+          </div>
+        </div>
+      </div>
+      <p>
+        I am a 20 years old software engineer from Argentina. My goal is to turn
+        your ideas into digital reality, providing cutting-edge solutions and an
+        extraordinary user experience.
+      </p>
+    </section>
+    <section class="flex flex-col gap-8">
+      <h2 class="text-white text-2xl font-semibold">Experience</h2>
+      <Card className="bg-[#777777]/10 border-zinc-700">
+        <CardHeader>
+          <div class="flex justify-between items-center">
+            <h3 class="text-xl font-semibold text-white">Frontend Engineer</h3>
+            <!-- <a
+              href="https://www.moodlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ExternalLink className="size-5 text-white/70" />
+            </a> -->
+            <p class="text-white">In process</p>
+          </div>
+          <h4 class="text-lg font-medium text-gray-200">Moodlify</h4>
+          <p class="text-sm text-gray-200/90">August 2024 - Present</p>
+        </CardHeader>
+        <CardContent>
+          <p class="text-gray-300">
+            Creator of Moodlify, a platform that generates spotify playlists
+            based on your favourite artists and your mood.
+          </p>
+        </CardContent>
+      </Card>
+      <Card className="bg-[#777777]/10 border-zinc-700">
+        <CardHeader>
+          <h3 class="text-xl font-semibold text-white">
+            Full-Stack Software Engineer
+          </h3>
+          <h4 class="text-lg font-medium text-gray-200">SQLDATA</h4>
+          <p class="text-sm text-gray-200/90">January 2023 - Present</p>
+        </CardHeader>
+        <CardContent>
+          <p class="text-gray-300">
+            I am dedicated to solving code bugs in limited periods of time and
+            developing custom systems that align with the specific needs of
+            clients.
+          </p>
+        </CardContent>
+      </Card>
+      <Card className="bg-[#777777]/10 border-zinc-700">
+        <CardHeader>
+          <h3 class="text-xl font-semibold text-white">
+            Full-Stack Software Engineer
+          </h3>
+          <h4 class="text-lg font-medium text-gray-200">Importados Beauty</h4>
+          <p class="text-sm text-gray-200/90">August 2023</p>
+        </CardHeader>
+        <CardContent>
+          <p class="text-gray-300">
+            I developed an ecommerce for a perfume store selling foreign
+            products. I was in charge of designing an attractive and
+            user-friendly user interface, as well as serverside development.
+          </p>
+        </CardContent>
+      </Card>
+    </section>
+    <section class="flex flex-col gap-8">
+      <h2 class="text-white text-2xl font-semibold">Projects</h2>
+      <div class="flex flex-wrap justify-between gap-y-8">
+        <Card className="bg-[#777777]/10 border-zinc-700 w-full sm:w-[49%]">
+          <CardHeader className="flex flex-col gap-3  space-y-0 p-0">
+            <img
+              src="https://alexcraviotto.com/_next/image?url=%2Fimages%2Fprojects%2Fconversalink.webp&w=1080&q=75"
+              alt="Project #1"
+              class="rounded-t-lg"
+            />
+          </CardHeader>
+          <CardContent className="mt-4 flex justify-between items-center">
+            <h3 class="text-xl font-semibold text-white">Moodlify</h3>
+            <a
+              href="https://www.moodlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><ExternalLink className="size-5 text-white/70" /></a
+            >
+          </CardContent>
+        </Card>
+        <Card className="bg-[#777777]/10 border-zinc-700 w-full sm:w-[49%]">
+          <CardHeader className="flex flex-col gap-3  space-y-0 p-0">
+            <img
+              src="https://alexcraviotto.com/_next/image?url=%2Fimages%2Fprojects%2Fconversalink.webp&w=1080&q=75"
+              alt="Project #1"
+              class="rounded-t-lg"
+            />
+          </CardHeader>
+          <CardContent className="mt-4 flex justify-between items-center">
+            <h3 class="text-xl font-semibold text-white">IP Geo Location</h3>
+            <a
+              href="https://geo-ip-rho.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><ExternalLink className="size-5 text-white/70" /></a
+            >
+          </CardContent>
+        </Card>
+      </div>
+    </section>
+  </main>
+  <footer class="h-28 flex items-center justify-center mt-10">
+    <p class="text-gray-400">© 2024 Julian Re. All rights reserved.</p>
+  </footer>
+</Layout>
