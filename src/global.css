@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+*{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: "SUSE Mono", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}

@@ -1,0 +1,154 @@
+---
+import Julian from '../assets/Julian.jpeg';
+---
+
+<section class="min-h-screen py-20 px-8 md:px-16 lg:px-24 relative" id="description">
+    <!-- Background decoration -->
+    <div class="absolute top-20 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+    
+    <div class="max-w-7xl mx-auto relative z-10">
+        <!-- Section header -->
+        <div class="mb-16 animate-fade-in">
+            <span class="text-blue-400 font-semibold tracking-wider uppercase text-sm">About Me</span>
+            <h2 class="text-5xl md:text-6xl font-bold text-white mt-4">
+                Creating Digital Magic
+            </h2>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <!-- Left column - Text content -->
+            <div class="space-y-6 animate-slide-in-left">
+                <p class="text-xl text-gray-300 leading-relaxed">
+                    I'm a passionate developer who loves turning complex problems into 
+                    <span class="text-blue-400 font-semibold">elegant solutions</span>. 
+                    With a keen eye for design and a solid foundation in modern web technologies, 
+                    I build experiences that are both beautiful and functional.
+                </p>
+                
+                <p class="text-lg text-gray-400 leading-relaxed">
+                    My journey in tech started with a curiosity about how things work. 
+                    Today, that curiosity drives me to constantly learn and experiment with 
+                    cutting-edge technologies. Whether it's crafting pixel-perfect interfaces 
+                    or architecting robust backend systems, I approach every project with 
+                    dedication and attention to detail.
+                </p>
+                
+                <p class="text-lg text-gray-400 leading-relaxed">
+                    When I'm not coding, you'll find me exploring new technologies or sharing knowledge with the 
+                    developer community. I believe in the power of collaboration and 
+                    continuous learning.
+                </p>
+                
+                <!-- Skills tags -->
+                <div class="flex flex-wrap gap-3 pt-6">
+                    <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300 hover:bg-white/10 transition-colors">
+                        React
+                    </span>
+                    <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300 hover:bg-white/10 transition-colors">
+                        TypeScript
+                    </span>
+                    <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300 hover:bg-white/10 transition-colors">
+                        JavaScript
+                    </span>
+                    <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300 hover:bg-white/10 transition-colors">
+                        Node.js
+                    </span>
+                    <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300 hover:bg-white/10 transition-colors">
+                        Express.js
+                    </span>
+                    <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300 hover:bg-white/10 transition-colors">
+                        Java
+                    </span>
+                    <span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-gray-300 hover:bg-white/10 transition-colors">
+                        MySQL
+                    </span>
+                </div>
+            </div>
+            
+            <!-- Right column - Hero image -->
+            <div class="relative animate-slide-in-right">
+                <!-- Main image container with glassmorphism effect -->
+                <div class="relative group">
+                    <!-- Glow effect behind image -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-2xl blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-60 group-hover:opacity-100"></div>
+                    
+                    <!-- Image wrapper -->
+                    <div class="relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm">
+                        <!-- Replace with your actual image -->
+                        <img 
+                            src={Julian.src}
+                            alt="Julian Re - Developer Portrait"
+                            class="w-full h-auto object-cover hover:grayscale-0 transition-all duration-500"
+                        />
+                        
+                        <!-- Overlay gradient -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+                    
+                </div>
+                
+                <!-- Decorative elements -->
+                <div class="absolute -top-8 -left-8 w-24 h-24 border-4 border-blue-500/30 rounded-full animate-pulse"></div>
+                <div class="absolute -bottom-8 -right-8 w-32 h-32 border-4 border-purple-500/20 rounded-full"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slide-in-left {
+        from {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes slide-in-right {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+    
+    .animate-fade-in {
+        animation: fade-in 1s ease-out;
+    }
+    
+    .animate-slide-in-left {
+        animation: slide-in-left 0.8s ease-out 0.2s both;
+    }
+    
+    .animate-slide-in-right {
+        animation: slide-in-right 0.8s ease-out 0.4s both;
+    }
+    
+    .animate-float {
+        animation: float 3s ease-in-out infinite;
+    }
+</style>
